@@ -84,9 +84,3 @@ Before publishing changes:
 ```bash
 git diff --check
 ```
-
-## License
-
-Choose and add a license before publishing this repository. For most public
-open-source skill repositories, the MIT License is a reasonable default.
-# SKILLS-Framework-X-
