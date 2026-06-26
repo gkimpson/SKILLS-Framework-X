@@ -12,12 +12,15 @@ async benefits.
 ## What This Skill Covers
 
 - Project structure for closures, controllers, and services
+- Framework-X App routing, redirects, error handling, and access logs
+- Middleware, including async-aware response middleware
+- PSR-7 request and response handling
 - Dependency injection and container usage
-- Promise-based async service composition
+- Fibers, coroutines, and promise-based async composition
 - PHPUnit testing patterns for handlers and async services
-- Docker Compose deployments with watch mode
-- Reverse proxy deployments with Nginx or Caddy
-- When to avoid traditional Nginx + PHP-FPM setups
+- Built-in server, PHP-FPM, systemd, Docker, Nginx, and Caddy deployments
+- Integrations for auth, sessions, database, filesystem, queueing, streaming,
+  templates, and child processes
 - Common Framework-X architecture mistakes
 
 ## When To Use It
@@ -36,10 +39,17 @@ Use this skill when an agent is helping with:
 ```text
 .
 ├── README.md
-└── SKILL.md
+├── SKILL.md
+└── references/
+    ├── architecture-testing.md
+    ├── async.md
+    ├── core-api.md
+    ├── deployment.md
+    └── integrations.md
 ```
 
-`SKILL.md` contains the actual agent instructions and examples.
+`SKILL.md` contains the trigger-level guidance and points agents to the focused
+reference files when a task needs more detail.
 
 ## Installation
 
@@ -47,7 +57,7 @@ Clone or copy this repository into your local skills directory:
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/YOUR_USERNAME/framework-x-best-practices.git \
+git clone <repository-url> \
   ~/.claude/skills/framework-x-best-practices
 ```
 
@@ -75,9 +85,9 @@ describe Framework-X concepts.
 
 ## Maintenance
 
-Update `SKILL.md` when Framework-X, ReactPHP, Docker Compose, or deployment
-best practices change. Keep examples small, runnable, and focused on the
-decision they demonstrate.
+Update `SKILL.md` and the relevant file under `references/` when Framework-X,
+ReactPHP, Docker, or integration best practices change. Keep examples small,
+runnable, and focused on the decision they demonstrate.
 
 Before publishing changes:
 
